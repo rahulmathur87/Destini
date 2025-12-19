@@ -57,8 +57,10 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 2,
                 child: TextButton(
                   onPressed: () {
-                    //Choice 1 made by user.
-                    storyBrain.nextStory(1);
+                    setState(() {
+                      //Choice 1 made by user.
+                      storyBrain.nextStory(1);
+                    });
                   },
                   style: TextButton.styleFrom(backgroundColor: Colors.red),
                   child: Text(
@@ -74,8 +76,10 @@ class _StoryPageState extends State<StoryPage> {
                 //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: TextButton(
                   onPressed: () {
-                    //Choice 2 made by user.
-                    storyBrain.nextStory(2);
+                    setState(() {
+                      //Choice 2 made by user.
+                      storyBrain.nextStory(2);
+                    });
                   },
                   style: TextButton.styleFrom(backgroundColor: Colors.blue),
                   child: Text(
@@ -91,7 +95,5 @@ class _StoryPageState extends State<StoryPage> {
     );
   }
 }
-
-//TODO: Step 24 - Run the app and try to figure out what code you need to add to this file to make the story change when you press on the choice buttons.
 
 //TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
